@@ -1,14 +1,30 @@
+function add(a,b){
+    return a+b;
+}
+
+function subtract(a,b){
+    return a-b;
+}
+
+function multiply(a,b){
+    return a*b;
+}
+
+function divide(a,b){
+    return a/b;
+}
+
+function operate(operator, num1, num2){
+    operator(num1, num2);
+}
+
 const clearBtn = document.querySelector(".clear");
 clearBtn.addEventListener("click", clearResult);
-
-const result = document.querySelector(".result");
 
 function clearResult(){
     result.textContent ="";
 }
 
-function insertNumber(number){
-    result.textContent = number;
-}
-const seven = document.querySelector(".seven");
-seven.addEventListener("click", insertNumber(seven.textContent) );
+
+
+const result = document.querySelector(".result");

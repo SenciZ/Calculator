@@ -16,7 +16,6 @@
 
 .container {
     font-size: 200%;
-
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 20vh 20vh 20vh 20vh 20vh;
@@ -35,13 +34,29 @@
     border: 1px solid rgb(247, 217, 154);;
 }
 
-.container div:hover{
-    background-color: rgb(214, 98, 3);
+
+
+.digitBtn{
+    font-size: 125%;
+    background-color: var(--main-btnColor);
+    border: transparent;
+    width: 100%;
+    height: 100%;
 }
 
-.clear{
-    grid-area: clear;
-    background-color: rgb(255, 81, 0);
+.clearBtn{
+    font-size: 125%;
+    background-color:  var(--action-color);
+    border: transparent;
+    width: 100%;
+    height: 100%;  
+}
+.functionBtn{
+    font-size: 125%;
+    background-color:  var(--action-color);
+    border: transparent;
+    width: 100%;
+    height: 100%;
 }
 
 .result{
@@ -54,87 +69,70 @@
     background-color: rgb(243, 188, 105);
 }
 
+.clear{
+    grid-area: clear;
+}
+
 .nine{
     grid-area: nine;
-    background-color: var(--main-btnColor);
 }
 
 .eight{
     grid-area: eight;
-    background-color: var(--main-btnColor);
 }
 
-#seven{
+.seven{
     grid-area: seven;
-    background-color: var(--main-btnColor);
-    width: 100%;
-    height: 100%;
-    outline: none;
-    border: transparent;
-    font-size: 130%;
 }
 
 .six{
     grid-area: six;
-    background-color: var(--main-btnColor);
 }
 
 .five{
     grid-area: five;
-    background-color: var(--main-btnColor);
 }
 
 .four{
     grid-area: four;
-    background-color: var(--main-btnColor);
 }
 
 .three{
     grid-area: three;
-    background-color: var(--main-btnColor);
 }
 
 .two{
     grid-area: two;
-    background-color: var(--main-btnColor);
 }
 
 .one{
     grid-area: one;
-    background-color: var(--main-btnColor);
 }
 
 .nill{
     grid-area: nill;
-    background-color: var(--main-btnColor);
 }
 
 .period{
     grid-area: period;
-    background-color: var(--main-btnColor);
 }
 
 .equals{
     grid-area: equals;
-    background-color:  var(--action-color);
 }
 
 .plus{
     grid-area: plus;
-    background-color: var(--action-color);
 }
 
 .minus{
     grid-area: minus;
-    background-color: var(--action-color);
 }
 
 .divide{
     grid-area: divide;
-    background-color: var(--action-color);
 }
 
 .multi{
     grid-area: multi;
-    background-color: var(--action-color);
 }
