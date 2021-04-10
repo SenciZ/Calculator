@@ -4,3 +4,105 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 20vh 20vh 20vh 20vh 20vh;
+    grid-template-areas: 
+        "clear result result result"
+        "seven eight nine plus"
+        "four five six minus"
+        "one two three divide"
+        "nill period equals multi";
+}
+
+.clear{
+    grid-area: clear;
+    background-color: aqua;
+}
+
+.result{
+    grid-area: result;
+    background-color: blanchedalmond;
+}
+
+.nine{
+    grid-area: nine;
+    background-color: blue;
+}
+
+.eight{
+    grid-area: eight;
+    background-color: blueviolet;
+}
+
+.seven{
+    grid-area: seven;
+    background-color: brown;
+}
+
+.six{
+    grid-area: six;
+    background-color: burlywood;
+}
+
+.five{
+    grid-area: five;
+    background-color: cadetblue;
+}
+
+.four{
+    grid-area: four;
+    background-color: chartreuse;
+}
+
+.three{
+    grid-area: three;
+    background-color: chocolate;
+}
+
+.two{
+    grid-area: two;
+    background-color: coral;
+}
+
+.one{
+    grid-area: one;
+    background-color: cornflowerblue;
+}
+
+.nill{
+    grid-area: nill;
+    background-color: darkred;
+}
+
+.period{
+    grid-area: period;
+    background-color: crimson;
+}
+
+.equals{
+    grid-area: equals;
+    background-color: darkblue;
+}
+
+.plus{
+    grid-area: plus;
+    background-color: darkgoldenrod;
+}
+
+.minus{
+    grid-area: minus;
+    background-color: darkgreen;
+}
+
+.divide{
+    grid-area: divide;
+    background-color: darkmagenta;
+}
+
+.multi{
+    grid-area: multi;
+    background-color: darkorange;
+}
