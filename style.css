@@ -11,7 +11,9 @@
 
 :root {
     --main-btnColor: rgb(241, 173, 24);
+    --main-btnHover: rgb(235, 148, 19);
     --action-color: rgb(247, 119, 0);
+    --action-hover: rgb(247, 91, 0);
   }
 
 .container {
@@ -44,6 +46,18 @@
     height: 100%;
 }
 
+.digitBtn:hover{
+    background-color: var(--main-btnHover);
+}
+
+
+.clearBtn:hover{
+    background-color: var(--action-hover);
+}
+
+.functionBtn:hover{
+    background-color: var(--action-hover);
+}
 .clearBtn{
     font-size: 125%;
     background-color:  var(--action-color);
