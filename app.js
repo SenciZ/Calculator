@@ -13,7 +13,6 @@ function clearDisplay(){
     firstDigit = 0;
     secondDigit = 0;
     operatorStorage = null;
-    display.textContent = firstDigit;
 }
 
 function add(a,b){
@@ -35,9 +34,14 @@ function divide(a,b){
 const digitPressed = document.querySelectorAll(".digitBtn");
 digitPressed.forEach(btn => {
     btn.addEventListener('click', (e) => {
-       if(firstDigit == 0 | operatorStorage == null){
-        firstDigit += e.target.value;
-        display.textContent += e.target.value;
+       if(operatorStorage == null){
+            if(firstDigit == 0){
+                firstDigit = e.target.value;
+                display.textContent = e.target.value;
+            } else {
+                firstDigit += e.target.value;
+                display.textContent += e.target.value;
+            }
        } else if(operatorStorage != null && firstDigit != 0){
         secondDigit += e.target.value;
         display.textContent += e.target.value;
@@ -68,7 +72,6 @@ divideBtn.addEventListener("click", function(){
     operatorStorage = divide;
     display.textContent = `${firstDigit} / `
 })
-
 
 function operate(num1, operator, num2){
     display.textContent = operator(num1, num2);
