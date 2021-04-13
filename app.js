@@ -34,15 +34,15 @@ function divide(a,b){
 const digitPressed = document.querySelectorAll(".digitBtn");
 digitPressed.forEach(btn => {
     btn.addEventListener('click', (e) => {
-       if(operatorStorage == null){
-            if(firstDigit == 0){
+       if(operatorStorage === null){
+            if(firstDigit === 0){
                 firstDigit = e.target.value;
                 display.textContent = e.target.value;
             } else {
                 firstDigit += e.target.value;
                 display.textContent += e.target.value;
             }
-       } else if(operatorStorage != null && firstDigit != 0){
+       } else if(operatorStorage != null){
         secondDigit += e.target.value;
         display.textContent += e.target.value;
        }
@@ -79,7 +79,7 @@ function operate(num1, operator, num2){
 
 const equalButton = document.querySelector(".equalsBtn");
 equalButton.addEventListener("click", function(){
-    if(firstDigit == 0){
+    if(firstDigit === 0){
         return;
     }
     operate(firstDigit, operatorStorage, secondDigit);
