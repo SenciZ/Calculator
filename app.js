@@ -9,11 +9,11 @@ const clearBtn = document.querySelector(".clear");
 clearBtn.addEventListener("click", clearDisplay);
 
 function clearDisplay(){
+    display.textContent = 0;
     firstDigit = 0;
     secondDigit = 0;
     operatorStorage = null;
     display.textContent = firstDigit;
-
 }
 
 function add(a,b){
@@ -36,11 +36,11 @@ const digitPressed = document.querySelectorAll(".digitBtn");
 digitPressed.forEach(btn => {
     btn.addEventListener('click', (e) => {
        if(firstDigit == 0 | operatorStorage == null){
-        firstDigit += parseInt(e.target.value);
-        display.textContent += parseInt(e.target.value);
+        firstDigit += e.target.value;
+        display.textContent += e.target.value;
        } else if(operatorStorage != null && firstDigit != 0){
-        secondDigit += parseInt(e.target.value);
-        display.textContent += parseInt(e.target.value);
+        secondDigit += e.target.value;
+        display.textContent += e.target.value;
        }
     });
  });
