@@ -74,7 +74,7 @@
 }
 
 .display{
-    font-size: 100% !important;
+    font-size: 150% !important;
     color: black;
     display: flex;
     justify-content: flex-end !important;
