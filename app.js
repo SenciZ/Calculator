@@ -8,6 +8,7 @@ display.textContent = firstDigit;
 const clearBtn = document.querySelector(".clear");
 clearBtn.addEventListener("click", clearDisplay);
 
+// Clears the display
 function clearDisplay(){
     display.textContent = 0;
     firstDigit = 0;
