@@ -40,12 +40,12 @@ digitPressed.forEach(btn => {
                 firstDigit = e.target.value;
                 display.textContent = e.target.value;
             } else {
-                firstDigit += e.target.value;
-                display.textContent += e.target.value;
+                firstDigit = e.target.value;
+                display.textContent = e.target.value;
             }
         }
         if(operatorStorage != null){
-            secondDigit += e.target.value;
+            secondDigit = e.target.value;
             display.textContent += e.target.value;
        } else if(operatorStorage === null && firstDigit != 0){
             clearDisplay;
@@ -55,24 +55,37 @@ digitPressed.forEach(btn => {
 
 const addBtn = document.querySelector(".addBtn");
 addBtn.addEventListener("click", function(){
+    if(secondDigit != 0){
+        firstDigit = parseInt(firstDigit) + parseInt(secondDigit);
+    }
     operatorStorage = add;
     display.textContent = `${firstDigit} + `
+
 })
 
 const subtractBtn = document.querySelector(".subtractBtn");
 subtractBtn.addEventListener("click", function(){
+    if(secondDigit != 0){
+        firstDigit = parseInt(firstDigit) - parseInt(secondDigit);
+    }
     operatorStorage = subtract;
     display.textContent = `${firstDigit} - `
 })
 
 const multiBtn = document.querySelector(".multiBtn");
 multiBtn.addEventListener("click", function(){
+    if(secondDigit != 0){
+        firstDigit = parseInt(firstDigit) * parseInt(secondDigit);
+    }
     operatorStorage = multiply;
     display.textContent = `${firstDigit} * `
 })
 
 const divideBtn = document.querySelector(".divideBtn");
 divideBtn.addEventListener("click", function(){
+    if(secondDigit != 0){
+        firstDigit = parseInt(firstDigit) / parseInt(secondDigit);
+    }
     operatorStorage = divide;
     display.textContent = `${firstDigit} / `
 })
