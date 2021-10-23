@@ -115,7 +115,7 @@ divideBtn.addEventListener("click", function () {
 });
 
 function operate(num1, operator, num2) {
-  display.textContent = operator(num1, num2);
+  display.textContent =operator(num1, num2);
 }
 
 const equalButton = document.querySelector(".equalsBtn");
