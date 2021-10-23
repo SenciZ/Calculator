@@ -40,12 +40,12 @@ digitPressed.forEach((btn) => {
         firstDigit = e.target.value;
         display.textContent = e.target.value;
       } else {
-        firstDigit = e.target.value;
-        display.textContent = e.target.value;
+        firstDigit += e.target.value;
+        display.textContent += e.target.value;
       }
     }
     if (operatorStorage != null) {
-      secondDigit = e.target.value;
+      secondDigit += e.target.value;
       display.textContent += e.target.value;
     } else if (operatorStorage === null && firstDigit != 0) {
       operatorStorage = null;
@@ -115,7 +115,7 @@ divideBtn.addEventListener("click", function () {
 });
 
 function operate(num1, operator, num2) {
-  display.textContent =operator(num1, num2);
+  display.textContent = operator(num1, num2);
 }
 
 const equalButton = document.querySelector(".equalsBtn");
