@@ -48,6 +48,7 @@ digitPressed.forEach(btn => {
             secondDigit = e.target.value;
             display.textContent += e.target.value;
        } else if(operatorStorage === null && firstDigit != 0){
+           operatorStorage = null;
             clearDisplay;
        }
     });
@@ -56,7 +57,13 @@ digitPressed.forEach(btn => {
 const addBtn = document.querySelector(".addBtn");
 addBtn.addEventListener("click", function(){
     if(secondDigit != 0){
-        firstDigit = parseInt(firstDigit) + parseInt(secondDigit);
+        operate(firstDigit, operatorStorage, secondDigit);
+        firstDigit = display.textContent;
+        secondDigit = 0;
+    } else if(secondDigit = 0){
+        operate(firstDigit, operatorStorage, secondDigit);
+        firstDigit = display.textContent;
+        secondDigit = 0;
     }
     operatorStorage = add;
     display.textContent = `${firstDigit} + `
@@ -66,7 +73,13 @@ addBtn.addEventListener("click", function(){
 const subtractBtn = document.querySelector(".subtractBtn");
 subtractBtn.addEventListener("click", function(){
     if(secondDigit != 0){
-        firstDigit = parseInt(firstDigit) - parseInt(secondDigit);
+        operate(firstDigit, operatorStorage, secondDigit);
+        firstDigit = display.textContent;
+        secondDigit = 0;
+    } else if(secondDigit = 0){
+        operate(firstDigit, operatorStorage, secondDigit);
+        firstDigit = display.textContent;
+        secondDigit = 0;
     }
     operatorStorage = subtract;
     display.textContent = `${firstDigit} - `
@@ -75,7 +88,13 @@ subtractBtn.addEventListener("click", function(){
 const multiBtn = document.querySelector(".multiBtn");
 multiBtn.addEventListener("click", function(){
     if(secondDigit != 0){
-        firstDigit = parseInt(firstDigit) * parseInt(secondDigit);
+        operate(firstDigit, operatorStorage, secondDigit);
+        firstDigit = display.textContent;
+        secondDigit = 0;
+    } else if(secondDigit = 0){
+        operate(firstDigit, operatorStorage, secondDigit);
+        firstDigit = display.textContent;
+        secondDigit = 0;
     }
     operatorStorage = multiply;
     display.textContent = `${firstDigit} * `
@@ -84,7 +103,13 @@ multiBtn.addEventListener("click", function(){
 const divideBtn = document.querySelector(".divideBtn");
 divideBtn.addEventListener("click", function(){
     if(secondDigit != 0){
-        firstDigit = parseInt(firstDigit) / parseInt(secondDigit);
+        operate(firstDigit, operatorStorage, secondDigit);
+        firstDigit = display.textContent;
+        secondDigit = 0;
+    } else if(secondDigit = 0){
+        operate(firstDigit, operatorStorage, secondDigit);
+        firstDigit = display.textContent;
+        secondDigit = 0;
     }
     operatorStorage = divide;
     display.textContent = `${firstDigit} / `
@@ -97,7 +122,7 @@ function operate(num1, operator, num2){
 const equalButton = document.querySelector(".equalsBtn");
 equalButton.addEventListener("click", function(){
     operate(firstDigit, operatorStorage, secondDigit);
-    firstDigit = parseInt(display.textContent);
+    firstDigit = display.textContent;
     secondDigit = 0;
 });
 
